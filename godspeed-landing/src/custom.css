@@ -1,0 +1,331 @@
+/* custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Theme Colors */
+:root {
+  --gs-dark: #070b14;
+  --gs-dark-subtle: #11172c;
+  --gs-primary: #6e82ff;
+  --gs-primary-hover: #566ae6;
+  --gs-light: #ffffff;
+  --gs-light-emphasis: #8b96b2;
+  --gs-border-dark: rgba(255, 255, 255, 0.1);
+}
+
+/* Main App Styles */
+.app {
+  background-color: var(--gs-dark) !important;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+  background-color: var(--gs-dark);
+  color: var(--gs-light);
+}
+
+/* Background Colors */
+.bg-dark {
+  background-color: var(--gs-dark) !important;
+}
+
+.bg-dark-subtle {
+  background-color: var(--gs-dark-subtle) !important;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(180deg, var(--gs-dark) 0%, #0d1326 100%) !important;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--gs-primary) !important;
+}
+
+.text-light-emphasis {
+  color: var(--gs-light-emphasis) !important;
+}
+
+.text-light {
+  color: var(--gs-light) !important;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--gs-primary);
+  border-color: var(--gs-primary);
+  color: var(--gs-light);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--gs-primary-hover);
+  border-color: var(--gs-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 130, 255, 0.3);
+}
+
+.btn-outline-primary {
+  border-color: var(--gs-primary);
+  color: var(--gs-primary);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--gs-primary);
+  color: var(--gs-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(110, 130, 255, 0.3);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--gs-light);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--gs-light);
+  color: var(--gs-light);
+  transform: translateY(-2px);
+}
+
+.btn-dark-subtle {
+  background-color: var(--gs-dark-subtle);
+  border: none;
+  color: var(--gs-light-emphasis);
+  transition: all 0.2s ease;
+}
+
+.btn-dark-subtle:hover {
+  background-color: rgba(110, 130, 255, 0.15);
+  color: var(--gs-light);
+}
+
+/* Borders */
+.border-dark-subtle {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Cards and Shadows */
+.card {
+  overflow: hidden;
+}
+
+.shadow-subtle {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  box-shadow: 0 0 20px rgba(110, 130, 255, 0.3);
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Visual elements */
+.gradient-sphere {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(110, 130, 255, 0.2) 0%, rgba(110, 130, 255, 0) 60%);
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+}
+
+.code-preview {
+  position: relative;
+  border: 1px solid rgba(110, 130, 255, 0.15);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.client-logo {
+  height: 40px;
+  width: 100px;
+}
+
+.ecosystem-item {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(110, 130, 255, 0.1);
+}
+
+.ecosystem-item:hover {
+  background-color: rgba(110, 130, 255, 0.1);
+  color: var(--gs-light) !important;
+  border-color: var(--gs-primary);
+}
+
+/* Typography */
+.custom-font {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.display-5 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.display-3 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.display-2 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+.badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+}
+
+/* Additional Elements */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background-color: rgba(110, 130, 255, 0.2);
+  color: var(--gs-light) !important;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: var(--gs-primary);
+  color: var(--gs-light);
+}
+
+.quote-marks {
+  font-size: 3rem;
+  line-height: 1;
+  height: 40px;
+  font-family: Georgia, serif;
+  opacity: 0.7;
+}
+
+/* Pricing cards */
+.pricing {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-3, .display-2 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  
+  .custom-font {
+    font-size: 1rem;
+  }
+  
+  .w-75 {
+    width: 100% !important;
+  }
+  
+  .gradient-sphere {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+  }
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Links */
+a {
+  color: var(--gs-primary);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--gs-primary-hover);
+  text-decoration: none;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Adjust padding for fixed navbar */
+.app {
+  padding-top: 76px; /* Adjust based on your navbar height */
+}
+
+/* Custom hover effects for navbar links */
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--bs-primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:after,
+.navbar-dark .navbar-nav .nav-link.active:after {
+  width: 80%;
+}
