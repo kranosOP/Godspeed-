@@ -40,14 +40,14 @@ const Footer = () => {
                   type="email"
                   placeholder="Your email"
                   value={email}
-                  onChange={(e) => setEmail(e.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="me-2 footer-input"
                   required
                 />
                 <Button 
                   type="submit" 
                   variant="primary"
-                  className="subscribe-btn d-flex align-items-center"
+                  className="subscribe-btn d-flex align-items-center justify-content-center"
                 >
                   {subscribed ? (
                     <CheckCircle size={18} className="me-1" />
@@ -151,7 +151,7 @@ const Footer = () => {
                     <a href="#">Contact</a>
                   </li>
                   <li>
-                    <a href="#">VS Code Extension</a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=yaswanth1729.promethea" target="_blank" rel="noopener noreferrer">VS Code Extension</a>
                   </li>
                 </ul>
               </Col>
@@ -172,130 +172,6 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      
-      <style jsx>{`
-        .footer-wrapper {
-          background: linear-gradient(180deg, rgba(13, 17, 23, 0.97) 0%, rgba(13, 17, 23, 0.99) 100%);
-          border-top: 1px solid rgba(99, 102, 106, 0.2);
-          backdrop-filter: blur(8px);
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .footer-wrapper::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(90deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.3), rgba(59, 130, 246, 0));
-        }
-        
-        .newsletter-box {
-          background: rgba(255, 255, 255, 0.03);
-          border-radius: 8px;
-          border: 1px solid rgba(99, 102, 106, 0.2);
-        }
-        
-        .footer-input {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(99, 102, 106, 0.3);
-          color: #e6edf3;
-        }
-        
-        .footer-input:focus {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: rgba(59, 130, 246, 0.5);
-          box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
-          color: #e6edf3;
-        }
-        
-        .subscribe-btn {
-          width: 44px;
-          height: 38px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s ease;
-        }
-        
-        .social-icon {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(99, 102, 106, 0.2);
-          color: #e6edf3;
-          border-radius: 50%;
-          width: 42px;
-          height: 42px;
-          padding: 10px;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        
-        .social-icon:hover {
-          background: rgba(59, 130, 246, 0.15);
-          border-color: rgba(59, 130, 246, 0.3);
-          color: #3b82f6;
-          transform: translateY(-2px);
-        }
-        
-        .footer-links li {
-          margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-          color: rgba(230, 237, 243, 0.8);
-          text-decoration: none;
-          transition: all 0.2s ease;
-          position: relative;
-          padding-left: 0;
-        }
-        
-        .footer-links a::before {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 1px;
-          bottom: -2px;
-          left: 0;
-          background-color: #3b82f6;
-          transition: all 0.2s ease;
-        }
-        
-        .footer-links a:hover {
-          color: #3b82f6;
-          padding-left: 5px;
-        }
-        
-        .footer-links a:hover::before {
-          width: 100%;
-        }
-        
-        .footer-bottom {
-          border-top: 1px solid rgba(99, 102, 106, 0.2);
-        }
-        
-        .legal-links a {
-          position: relative;
-          transition: all 0.2s ease;
-        }
-        
-        .legal-links a:hover {
-          color: #3b82f6 !important;
-        }
-        
-        @media (max-width: 767px) {
-          .legal-links {
-            flex-direction: column;
-            gap: 12px;
-            align-items: flex-start;
-            margin-top: 16px;
-          }
-        }
-      `}</style>
     </footer>
   );
 };
